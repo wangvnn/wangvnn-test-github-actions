@@ -15,7 +15,7 @@ jobs:
     
     strategy:
       fail-fast: false
-    container: rostooling/setup-ros-docker:ubuntu-bionic-ros-melody-ros-base-latest
+    container: rostooling/setup-ros-docker:ubuntu-bionic-ros-melodic-ros-base-latest
       
     steps:    
     - uses: actions/checkout@v2
