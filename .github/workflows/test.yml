@@ -15,8 +15,13 @@ jobs:
     
     strategy:
       fail-fast: false
-    container: rostooling/setup-ros-docker:ubuntu-bionic-ros-melodic-ros-base-latest
+    container: ubuntu:bionic
       
     steps:    
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - uses: ros-tooling/setup-ros@0.0.25
+      with:
+        required-ros-distributions: melodic
