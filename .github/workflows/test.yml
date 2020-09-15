@@ -18,10 +18,11 @@ jobs:
     container: ubuntu:bionic
       
     steps:    
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    # Checkout SA ros1 branch into sample folder
+    - name: Checkout hello world sample app
+      uses: actions/checkout@v2
       with:
-        node-version: '12.x'
-    - uses: ros-tooling/setup-ros@0.0.25
-      with:
-        required-ros-distributions: melodic
+        repository: aws-robotics/aws-robomaker-sample-application-helloworld
+        path: sample
+        ref: ros1
+    - run: ls
