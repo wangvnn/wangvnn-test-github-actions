@@ -25,4 +25,9 @@ jobs:
         repository: aws-robotics/aws-robomaker-sample-application-helloworld
         path: sample
         ref: ros1
+    # Checkout action code into action folder
+    - name: Checkout action code
+      uses: actions/checkout@v2
+      with:
+        path: action            
     - run: ls
